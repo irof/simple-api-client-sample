@@ -5,6 +5,17 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+        .today {
+            background-color: #5bc0de;
+        }
+        .before-today {
+            background-color: #FFFFFF;
+        }
+        .before-this-year {
+            background-color: #FFFFFF;
+        }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-default navbar-static-top">
@@ -46,7 +57,7 @@
                 <span th:text="${tweet.text}">やあ！ほげくんだよ！！</span>
             </div>
             <div class="text-right">
-                <span class="label label-info" th:text="${tweet.timestamp}">2015-10-20T12:34:56</span>
+                <span class="label" th:classappend="${tweet.timestamp.asClass()}" th:text="${tweet.timestamp.asText()}">2015-10-20T12:34:56</span>
             </div>
         </div>
     </div>

@@ -9,7 +9,7 @@ public class Tweet {
 
     public String id;
     public String text;
-    public String timestamp;
+    public TweetTimestamp timestamp;
     public String userId;
 
     @Override
